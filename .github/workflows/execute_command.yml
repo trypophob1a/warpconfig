@@ -1,0 +1,19 @@
+name: Execute Command
+
+on:
+  workflow_dispatch:
+    inputs:
+      command:
+        description: "Command to execute"
+        required: true
+        default: "echo Hello, GitHub Actions!"
+
+jobs:
+  run_command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run command
+        run: ${{ github.event.inputs.command }}
