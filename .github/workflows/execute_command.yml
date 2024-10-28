@@ -17,6 +17,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: Print GitHub Server Time
+        run: date -u
+        
       - name: ${{ github.event.inputs.run_id }}
         run: echo "run_id:${{ github.event.inputs.run_id }}"
 
