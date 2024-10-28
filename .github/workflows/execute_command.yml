@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Print run ID
+      - name: ${{ github.event.inputs.run_id }}
         run: echo "run_id:${{ github.event.inputs.run_id }}"
 
       - name: Run command
