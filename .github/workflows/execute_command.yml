@@ -2,16 +2,6 @@ name: Execute Command
 
 on:
   workflow_dispatch:
-    inputs:
-      command:
-        description: "Command to execute"
-        required: true
-        default: "echo Hello, GitHub Actions!"
-      run_id:
-        description: "Unique Run ID"
-        required: true
-        default: "default_run_id"
-
 jobs:
   run_command:
     runs-on: ubuntu-latest
